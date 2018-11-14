@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>{% block title %}{% endblock%}</title>
+		<link rel="stylesheet" href="{% block style %}{% endblock %}">
+		<meta charset="utf-8">
+   		<meta name="viewport" content="width=device-width, initial-scale=1">
+   		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="page-header">
+				<h2 class="inline"><a href="/">Home</a></h2>
+				<a href="/route2">route2</a>
+				<a href="/route3">route3</a>
+				<a href="/route4">route4</a>
+				<a href="/account">Account</a>
+				<a href="/login">Login</a>
+				<a href="/logout">Logout</a>
+			</div>
+		</div>
+		<div class="container">
+			{% block body %}{% endblock%}
+		</div>
+	</body>
+</html>
