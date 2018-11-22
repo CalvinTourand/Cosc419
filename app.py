@@ -75,11 +75,10 @@ def create():
         curs.execute('''select COUNT(*) from users where username = ?;''', (username,))
         user = curs.fetchone()
 	if user[0] == 0:
-		curs.execute('''insert into users values('admin','pass');''')
+		curs.execute('''insert into users values(?,?);''', (username,password))
                	flash('Account Created')
 		conn.commit()
 		conn.close()
-        	#return render_template('test.html', infos=username+password)
 		return redirect('login')
         else:
                 flash('Account not created')
