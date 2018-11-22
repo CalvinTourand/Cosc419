@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo yum install python-pip
 sudo pip install --upgrade pip
 sudo pip install flask

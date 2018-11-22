@@ -1,15 +1,15 @@
 {% extends "template.html" %}
 {% block title%}
-Login
+Create Account
 {% endblock %}
 {% block body %}
-<h1>Login to Account</h1>
+<h1>Create an Account</h1>
 <h2>
 {% for message in get_flashed_messages() %}
 	{{ message }}
 {% endfor %}
 </h2>
-<p><form action="request" method="POST">
+<p><form action="create" method="POST">
 <strong>Username</strong></br><input type="text" name="user" required></br>
 <strong>Password</strong></br><input type="password" name="pass" required></br></br>
                         <input type="submit" value="Submit">
